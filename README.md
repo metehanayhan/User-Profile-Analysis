@@ -1,3 +1,4 @@
+[EN]
 # Age and Generation Prediction Project
 
 ## Project Overview
@@ -34,3 +35,46 @@ This project aims to tackle the challenges of working with an extremely imbalanc
 ## Results
 
 The final models demonstrated satisfactory performance in predicting user age and generation.
+
+[TR]
+
+# Age and Generation Prediction Project
+
+## Proje Genel Bakış
+
+Bu proje, oldukça dengesiz bir veri setiyle çalışmanın zorluklarını ele almayı ve hem regresyon hem de sınıflandırma yöntemlerini kullanarak çözüm üretmeyi amaçlamaktadır. Veri setlerindeki dengesizlik, model doğruluğunu ve güvenilirliğini genellikle olumsuz etkiler. Bu sorunları hafifletmek için çeşitli stratejiler ve modeller uygulanmıştır. Proje, OKCupid adlı platformdaki kullanıcı profillerinden yola çıkarak, yaş ve jenerasyon grubu (Millennial, Gen X, Boomer) tahmini yapmayı hedeflemektedir. Gözetimli makine öğrenimi teknikleri kullanılarak, sağlanan profil verilerinden demografik detayları doğru bir şekilde belirleyebilecek modeller oluşturulması amaçlanmıştır.
+
+---
+
+## Yöntem
+
+1. **Veri Ön İşleme**
+   - Eksik veri içeren satırlar temizlendi.
+   - Birden fazla metin sütunu (örneğin, essay sütunları) tek bir metin özelliğinde birleştirildi.
+   - Kategorik değişkenler Label Encoding yöntemiyle kodlandı.
+   - `body_type`, `diet`, `education`, ve `drinks` gibi belirli özellikler daha genel kategorilere dönüştürüldü.
+
+2. **Keşifsel Veri Analizi (EDA)**
+   - Yaş, vücut tipi ve eğitim gibi çeşitli özelliklerin dağılımları incelendi.
+   - Özellikler arasındaki korelasyonlar görselleştirildi.
+   - Potansiyel aykırı değerler belirlendi ve eksik veriler ele alındı.
+
+3. **Özellik Mühendisliği**
+   - Essay metinlerinden metin uzunluğu gibi yeni özellikler oluşturuldu.
+   - Kategorik özellikler için dummy değişkenler oluşturuldu.
+
+4. **Model Eğitimi**
+   - Veri eğitim ve test setlerine bölündü.
+   - Yaş ve jenerasyon tahmini için Linear Regression ve Logistic Regression gibi çeşitli makine öğrenimi modelleri eğitildi.
+   - Model performansını değerlendirmek için R² skoru, Mean Squared Error (MSE) ve sınıflandırma doğruluğu gibi metrikler kullanıldı.
+
+5. **Model Değerlendirme**
+   - Eğitilen modeller test verisi üzerinde değerlendirildi.
+   - Jenerasyon tahmini için karışıklık matrisleri ve sınıflandırma raporları analiz edildi.
+   - Model doğruluğunu artırmak için hata analizi yapıldı.
+
+---
+
+## Sonuçlar
+
+Son modeller, kullanıcıların yaşını ve jenerasyonlarını tahmin etmede tatmin edici bir performans göstermiştir. Elde edilen sonuçlar, dengesiz veri setleri üzerinde güçlü tahmin modelleri oluşturmanın mümkün olduğunu ortaya koymaktadır.
